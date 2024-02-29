@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!Copyright © 2023 Montri Kiatphaophan | All rights reserved.>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/iRequest.css">
+    <link rel="stylesheet" href="css/answer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/chat.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="images/krut.png" />
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:updated_time" content="1440432930" />
+
+
+
+<title>MNRE | Chatbot</title>
+
+</head>
+
+<body onload="startFunction()">
+    	<nav>
+        <div class="navbar">
+            <img 
+			class="dpimg" 
+			onclick="openFullScreenDP()" 
+			src="images/mnre.png" alt="">
+            	<div 
+				class="personalInfo">
+                		<label id="name">ศูนย์บริการร่วม ทส.</label>
+               
+            	</div>
+        </div>
+    	</nav>
+
+	<input 
+		type="text" 
+		id="Question" 
+		placeholder="ถอดอักษร (ไทย-โรมัน)" 
+		title="ID" disabled>
+
+ 	<div 
+		class="scrollable" 
+		id="myScrollable">
+      	<div 
+			id="chatting" 
+			class="chatting">
+		<ul id="Answer">
+   			<li><a href="#">           
+ 				<h3>คำอ่าน</h3>
+				<input  
+					type="text" 
+					id="thaiName" 
+					value="" 
+					placeholder="แม่-น้ำ เจ้า-พระ-ยา">
+				</input>
+	
+						<font 
+							size="-1" 
+							color="red">1. ขีด <-> แบ่งเสียง<br> 2. เว้นวรรค ระหว่างคำ<br>
+								
+						</font>
+
+			<br>
+
+			<button 
+				class="btn" 
+				onclick="romanize()">
+					<i 
+					class="fa fa-pencil">
+					</i> 
+				Romanize*
+			</button>
+
+			<button 
+				class="btn" 
+				onclick="copy()">
+					<i 
+					class="">
+					</i> 
+				Copy
+			</button>
+
+
+			<button 
+				class="btn" 
+				onclick="clearText()">
+					<i 
+					class="">
+					</i> 
+				Clear
+			</button>
+			       	
+		<br>
+
+			<textarea 
+				id="romanize" 
+				row="1" 
+				cols="2" 
+				style="height: 80px">
+			</textarea>
+
+						<font 
+							size="-1" 
+							color="blue">*อ้างถึง<br>
+							&nbsp;1. ประกาศสำนักนายกรัฐมนตรี เรื่อง หลักเกณฑ์การถอดอักษรไทยเป็นอักษรโรมัน (2543)<br>
+							&nbsp;2. ประกาศราชบัณฑิตยสถาน เรื่อง หลักเกณฑ์การถอดอักษรไทยเป็นอักษรโรมัน (2542)<br>
+							&nbsp;3. ระเบียบกระทรวงการต่างประเทศ ว่าด้วยการออกหนังสือเดินทาง พ.ศ. 2548 ข้อ 39 (การสะกดชื่อภาษาอังกฤษ)</b><br>
+							&nbsp;4. United Nations Romanization Systems for Geographical Names (2013)<br>
+							&nbsp;5. ISO 91140-2 ยกเว้น <br>
+							&nbsp; - เสียง จ- ใช้ CH- แทน C- <br>
+							&nbsp; - ไม่เติมไพรม์ <'> หน้าเสียง อ- 
+
+						</font>
+		</a>
+		
+
+
+            <font size="-2">
+			<center><a 
+					href='https://ratchakitcha.soc.go.th/documents/1714357.pdf'>
+					<i 
+						class="fa fa-file-pdf-o">
+					<b>
+					</i> 	หลักเกณฑ์การถอดอักษร (ไทย-โรมัน)
+						
+					</b>				
+				</a>
+				
+			</center>
+					
+		</font>
+
+		
+         </div>
+	<script src="js/roman.js"></script>
+     
+
+       
+</body>
+</html>
