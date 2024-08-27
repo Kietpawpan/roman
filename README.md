@@ -1,5 +1,5 @@
 # roman.js
-A javascript library for romanization of Thai names.
+A JavaScript library for romanization of Thai names.
 
 1. Load the roman library.
 ```
