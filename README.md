@@ -16,7 +16,7 @@ A javascript library for romanization of Thai names.
 </input>
 ```
 
-2. In the same index file, create the output textarea (id="thaiName").
+3. In the same index file, create the output textarea (id="thaiName").
 ```
 <textarea 
   id="romanize" 
@@ -24,4 +24,16 @@ A javascript library for romanization of Thai names.
   cols="2" 
   style="height: 80px">
 </textarea>
+```
+
+4. Also, create the Romanize botton, for running the romanization function.
+```
+<button 
+   class="btn" 
+   onclick="romanize()">
+			<i 
+		 	 class="fa fa-pencil">
+			</i> 
+   Romanize*
+</button>
 ```
