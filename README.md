@@ -53,4 +53,5 @@ A JavaScript library for romanization of Thai names.
 </button>
 ```
 ## Example
-[Romanization at https://kietpawpan/github.io/roman](https://kietpawpan/github.io/roman)
+[https://kietpawpan.github.io/roman/](https://kietpawpan.github.io/roman/)
+
