@@ -46,6 +46,9 @@ A JavaScript library for romanization of Thai names.
   Copy
 </button>
 
+## Example
+[https://kietpawpan/github.io/roman](https://kietpawpan/github.io/roman)
+
 <button 
   class="btn" 
   onclick="clearText()">
