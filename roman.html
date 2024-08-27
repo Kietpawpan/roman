@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<!Copyright (C) 2024 Monte Kietpwpan | August 7, 2024>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Romanization</title>
+
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://kietpawpan.github.io/encryption/w3.css">
+<link rel="stylesheet" href="https://kietpawpan.github.io/encryption/encrypt.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap">
+<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+
+<style>
+.fa-clone{
+ font-size:60px;!important;
+ color:grey;
+}
+
+.fa-clone:hover{
+   color:RoyalBlue!important;
+}
+
+.fa-paste{
+ font-size:60px;!important;
+ color:grey;
+}
+
+.fa-paste:hover{
+   color:RoyalBlue!important;
+}
+
+</style>
+
+</head>
+
+<body class="w3-light-grey">
+
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>ROMANIZATION</b></h1>
+   <p><font size="+2">
+      โปรแกรมถอดอักษร ไทย-โรมัน <span class="w3-tag">RTGS</span> 
+  | <a href="https://kietpawpan.github.io/credit/roman.html">Credits</a></font>
+	</p>
+
+
+
+  
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+ 
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+     <div class="w3-container">
+      <h3 style="background-color:green;color:white;text-align:center;margin-top:0px;"><b>
+	Thai-Roman
+	</b>
+      </h3>
+      <h5><span class="w3-opacity" style="padding-top:20px;"><font size="+2">โปรแกรมนี้ ใช้ถอดอักษรไทยเป็นอักษรโรมัน ตามประกาศสำนักนายกรัฐมนตรี เรื่อง หลักเกณฑ์การถอดอักษรไทยเป็นอักษรโรมัน ลงวันที่ 23 เมษายน พ.ศ. 2543 ซึ่งใช้หลักเกณฑ์ของราชบัณฑิตยสถาน หรือ <b>Royal Thai General System of Transcription (RTGS)</b>
+</span><br><br>
+
+<div class="myapp">
+<textarea 
+	oninput ="setH()"
+	type="text" 
+        id="thaiName" 
+	placeholder="พะ-หล-โย-ธิน" 
+	required>
+</textarea>
+<p align="left">
+<button id="enc"
+	class="btn"
+	onclick="romanize()" 
+	style="margin-top:-30px;
+		margin-bottom:10px;">
+	<i 
+		class="fa fa-pencil ">
+	</i>
+			ROMANIZE
+</button>
+
+
+
+<div class="myapp">
+<textarea 	
+	type="password" 
+	name="psw" 
+	pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+	title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+	oninput="setHx()" 
+	type="text" 
+	id="romanize" 
+	placeholder="Roman text" 
+	required 
+	style="margin-top:5px;">
+</textarea>
+
+
+</div>
+
+<button class="btn"
+	style="margin-top:5px;
+	margin-bottom:10px;"
+	onclick="clearText()">
+		<i class="fa fa-trash ">
+		</i>
+			CLEAR
+</button>
+
+</p>
+
+
+	<p align="right" style="margin-top:-100px;">
+	<span id="c1">
+		<i 	class='fa fa-clone' 
+			onclick="copy()">
+		</i>
+	</span>
+	</p>
+
+
+</div>
+
+<br>
+<div class="myapp">
+<b>วิธีใช้</b><br>
+<ol>
+<li>ใช้ขีด (-) แยกเสียงแบบคำอ่าน เช่น คำว่า สมฤดี ให้พิมพ์ว่า สม-รึ-ดี จะถอดเป็น SOMRUEDI </li>
+<li>ใช้เว้นวรรค เพื่อแยกคำ (ถ้ามี) เช่น คำว่า น้ำตกเจ็ดสาวน้อย ให้พิมพ์ว่า น้ำ-ตก เจ็ด สาว น้อย จะถอดเป็น NAMTOK CHET SAO NOI</li>
+</ol>
+</div>
+
+
+<div class="myapp"><b>บรรณานุกรม</b><br></div>
+	
+<div class="ref">
+กระทรวงการต่างประเทศ. 2548. <b>ระเบียบกระทรวงการต่างประเทศ ว่าด้วยการออกหนังสือเดินทาง พ.ศ. 2548 ข้อ 39</b>. (<a href="https://image.mfa.go.th/mfa/0/zE6021nSnu/%E0%B8%81%E0%B8%8F%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%87/9.pdf">https://image.mfa.go.th/mfa/0/zE6021nSnu/กฎหมายที่เกี่ยวข้อง/9.pdf</a>).
+</div>
+
+<div class="ref">
+ราชบัณฑิตยสถาน. 2542. <b>ประกาศราชบัณฑิตยสถาน เรื่อง หลักเกณฑ์การถอดอักษรไทยเป็นอักษรโรมันแบบถ่ายเสียง</b>. 14 หน้า. (<a href="https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERJ5814038">https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERJ5814038</a>).
+</div>
+
+<div class="ref">
+สำนักนายกรัฐมนตรี. 2543. <b>ประกาศสำนักนายกรัฐมนตรี เรื่อง หลักเกณฑ์การถอดอักษรไทยเป็นอักษรโรมัน</b>. ราชกิจจานุเบกษา เล่มที่ 116 ตอนที่ 37 ง, หน้า 11-12.(<a href="https://ratchakitcha.soc.go.th/documents/1714357.pdf">https://ratchakitcha.soc.go.th/documents/1714357.pdf</a>). 
+</div>
+
+<div class="ref">
+Kietpawpan, M. 2024. 2024. <b>Roman.js: A JavaScript Library for Romanization of Thai Names
+</b>. Github Repository: Roman (<a href="https://github.com/Kietpawpan/roman">https://github.com/Kietpawpan/roman/</a>). 
+</div>
+
+<div class="ref">
+United Nations. 2013. <b>Report on the Current Status of United Nations RomanizationSystems for Geographical Names: Thai.  UNGEGN Working Group on Romanization Systems</b>. 3 pp. (<a href="https://unstats.un.org/unsd/ungegn/working_groups/wg5/documents/wgrr4thai.pdf">https://unstats.un.org/unsd/ungegn/working_groups/wg5/documents/wgrr4thai.pdf</a>).
+</div>
+
+
+<p></p>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+
+
+
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top"><p align="center">
+  <img class="w3-animate-fading" src="https://kietpawpan.github.io/roman/images/mnre.png" style="width:50%"></p>
+    <div class="w3-container w3-white">
+      <h4><b>MNRE SLC</b></h4>
+      <p onclick="location.href=&#39;timeline.php&#39;">โครงการพัฒนาบริการอิเล็กทรอนิกส์ของศูนย์บริการร่วมกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม</p>
+    </div>
+  </div><hr>
+  
+</div><br>
+
+<!-- END w3-content -->
+</div>
+<center>Copyright © 2024 MNRE Service Link Center All rights reserved.<br><a style="text-decoration:none" href="https://esc.mnre.go.th/terms.html">เงื่อนไขบริการ</a> | <i class="fa fa-external-link " onclick="location.href=&#39;https://www.mnre.go.th/th/policy/content/1049&#39;"> นโยบายความเป็นส่วนตัว</i>
+
+
+</center>
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom" onclick="window.open(&#39;https://esc.mnre.go.th/&#39;, &#39;_self&#39;)">Home</button>
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Next »</button>
+</footer>
+
+<script src="ref.js"></script>
+<script src="https://kietpawpan.github.io/roman/js/roman.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</script>
+
+</div></body></html>
