@@ -37,3 +37,18 @@ A javascript library for romanization of Thai names.
    Romanize*
 </button>
 ```
+
+5. Then, create the Copy and the Clear buttons.
+```
+<button 
+  class="btn" 
+  onclick="copy()">
+  Copy
+</button>
+
+<button 
+  class="btn" 
+  onclick="clearText()">
+  Clear
+</button>
+```
