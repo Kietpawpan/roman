@@ -26,7 +26,7 @@ A JavaScript library for romanization of Thai names.
 </textarea>
 ```
 
-4. Also, create the Romanize botton, for running the romanization function.
+4. Also, create the Romanize botton, for running the romanization function, romanize().
 ```
 <button 
    class="btn" 
