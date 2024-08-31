@@ -55,3 +55,13 @@ A JavaScript library for romanization of Thai names.
 ## Example
 [https://kietpawpan.github.io/roman/](https://kietpawpan.github.io/roman/)
 
+## Version History
+
+### 2.1 | Sep. 1, 2024
+- New output format: Capitalized first letter of each word. 
+
+### 2.0 | Sep. 1, 2024
+- New UX, using w3.css.
+
+### 1.0 | Sep 23, 2023
+- Prototype  
