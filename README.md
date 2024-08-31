@@ -58,7 +58,7 @@ A JavaScript library for romanization of Thai names.
 ## Version History
 
 ### 2.1 | Sep. 1, 2024
-- New output format: Capitalized first letter of each word. 
+- New output format: Capitalizing the first letter of each word. 
 
 ### 2.0 | Sep. 1, 2024
 - New UX, using w3.css.
