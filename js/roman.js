@@ -1,6 +1,6 @@
-/* Copyright © 2023 Montri Kiatphaophan
- * roman.js | MIT License 
- * Sep 14, 2023
+/* Copyright © 2023-2024 Montri Kiatphaophan
+ * roman.js v.2.0 | MIT License 
+ * Sep 1, 2024
  */
 
 function romanize() {
@@ -17,7 +17,7 @@ function romanize() {
 		['อยู','YU'],['อยู่','YU'],['อย่า','YA'],['หยู','YU'],['หยา','YA'],['หยาง','YANG'],['หยวน','YUAN'],['หยาม','YAM'],
 		['เหยี่ยว','YIAO'],['เหมี่ยว','MIAO'],['ใหญ','YAI'],['ใหญ่','YAI'],['หญ้า','YA'],['หญา','YA'],
 		['เหรียญ','RIAN'],['เหรียน','RIAN'],['หราม','RAM'],['หร่าม','RAM'],
-		['พญา', 'PHAYA'],
+		['พญา', 'PHAYA'], ['แผล็ว','PHLAEO'],
 
 		['เทิง','THOENG'],
 		['ทรัพ','SAP'],['ทรัพย์','SAP'],
@@ -15843,13 +15843,19 @@ function romanize() {
 		word14=name14+"-";}
 		else{word14 = name14;}
 
-	document.getElementById("romanize").value = 
-			word1 + word2 + word3 + 
+var Rwords = word1 + word2 + word3 + 
 			word4 + word5 + word6 + 
 			word7 + word8 + word9 + 
 			word10 + word11 + word12 + 
 			word13 + word14;
+var Rwords2 = Rwords.toLowerCase().split(" ");
+for(let tx=0; tx<Rwords2.length;tx++){
+Rwords2[tx] =Rwords2[tx][0].toUpperCase() + Rwords2[tx].substr(1);
+}
+var RomanText = Rwords2.join(" ");
 
+	document.getElementById("romanize").value = RomanText;
+			
 }
 
 function clearText(){
