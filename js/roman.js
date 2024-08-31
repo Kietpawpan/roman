@@ -1,7 +1,17 @@
-/* Copyright © 2023-2024 Montri Kiatphaophan
+/* Copyright © 2023 Montri Kiatphaophan
  * roman.js v.2.0 | MIT License 
  * Sep 1, 2024
  */
+
+// Check Thai language, dash, space.  
+$("#thaiName").on("keypress", function(event) {
+    var thaiDashSpace = /([\u0E00-\u0E7F-"-"-" "]+)/gmu;
+    var key = String.fromCharCode(event.which);
+    if (thaiDashSpace.test(key)) {
+        return true;
+    }
+    alert ("โปรดกรอกภาษาไทย");
+});
 
 function romanize() {
 	const words = new Map([ 
